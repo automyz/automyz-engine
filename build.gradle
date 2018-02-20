@@ -8,6 +8,7 @@
 
 // Apply the java-library plugin to add support for Java Library
 apply plugin: 'java-library'
+apply plugin: 'eclipse'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -34,6 +35,15 @@ dependencies {
 	
 	// jsoup
 	compile group: 'org.jsoup', name: 'jsoup', version: '1.10.3'
+	
+	// https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
+	compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.6.3'
+	
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+	
+	// Logging
+	compile group: 'org.slf4j', name:'slf4j-api', version: '1.7.21'
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
