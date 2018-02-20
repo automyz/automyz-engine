@@ -1,7 +1,5 @@
 package com.automyz.database.mongo.util;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -76,7 +74,6 @@ public class MongoUtil {
 		try {
 			properties = new Properties();
 			inputstream = this.getClass().getClassLoader().getResourceAsStream(argPropertiesfilepath);
-//			inputstream = new FileInputStream(new File(argPropertiesfilepath));
 			properties.load(inputstream);
 		} catch (Exception e) {
 			throw new RuntimeException("Exception while reading the properties from a file:", e);
